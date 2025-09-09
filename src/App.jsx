@@ -16,11 +16,14 @@ function App() {
   - / use useState to store the data for the courses, categories, difficulties, and prices
   - / use useState to store the data for the category, difficulty, price, search, and sort
   */
+ 
+  // data states
   const [courses, setCourses] = useState([]);
   const [categories, setCategories] = useState([]);
   const [difficulties, setDifficulties] = useState([]);
   const [prices, setPrices] = useState([]);
 
+  // serach/filter/sort states
   const [category, setCategory] = useState("All Categories");
   const [difficulty, setDifficulty] = useState("All Difficulties");
   const [price, setPrice] = useState("All Prices");

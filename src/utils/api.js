@@ -15,6 +15,7 @@ const API_URL = "http://localhost:5123/";
 export async function fetchCourses(category, difficulty, price, search, sort) {
   let full_API_URL = API_URL + "courses";
 
+  // prepare queries object
   const queryParams = {};
 
   // check if queries exist
@@ -36,6 +37,7 @@ export async function fetchCourses(category, difficulty, price, search, sort) {
 
   const queryString = new URLSearchParams(queryParams).toString();
 
+  // add queries to url
   if (queryString) {
     full_API_URL += "?" + queryString;
   }
